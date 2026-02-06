@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Recipe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="edit-page">
+
+<div class="form-card">
+
+  <h1>Edit Recipe</h1>
+
+  <form action="my-recipes.html">
+
+    <label>Recipe Name</label>
+    <input type="text" value="Multi-Grain Power Loaf" required>
+
+    <label>Category</label>
+    <select required>
+      <option>Healthy Bakery</option>
+      <option>Gluten Free</option>
+      <option>Sugar Free</option>
+    </select>
+
+    <label>Description</label>
+    <textarea required>
+A wholesome, nutrient-packed loaf crafted with a blend of ancient grains and crunchy seeds. High in fiber and protein, this rustic bread is the perfect healthy base for your daily meals.
+    </textarea>
+
+    <label>Recipe Photo</label>
+    <input type="file">
+
+    <h3>Ingredients</h3>
+
+<div class="ingredient-row">
+  <input type="text" placeholder="Ingredient name" value="Whole wheat flour" required>
+  <input type="text" placeholder="Quantity" value="3 cups" required>
+</div>
+
+<div class="ingredient-row">
+  <input type="text" placeholder="Ingredient name" value="rolled oats" required>
+  <input type="text" placeholder="Quantity" value="½ cup" required>
+</div>
+
+<div class="ingredient-row">
+  <input type="text" placeholder="Ingredient name" value="instant yeast" required>
+  <input type="text" placeholder="Quantity" value="1 tbsp" required>
+</div>
+
+<div class="ingredient-row">
+  <input type="text" placeholder="Ingredient name" value="mixed seeds (pumpkin, sunflower, flax)" required>
+  <input type="text" placeholder="Quantity" value="¼ cup" required>
+</div>
+
+<div class="ingredient-row">
+  <input type="text" placeholder="Ingredient name" value="dried cranberries" required>
+  <input type="text" placeholder="Quantity" value="¼ cup" required>
+</div>
+
+<div class="ingredient-row">
+  <input type="text" placeholder="Ingredient name" value="warm water" required>
+  <input type="text" placeholder="Quantity" value="1 ½ cups" required>
+</div>
+
+<div class="ingredient-row">
+  <input type="text" placeholder="Ingredient name" value="honey" required>
+  <input type="text" placeholder="Quantity" value="1 tbsp" required>
+</div>
+
+<div class="ingredient-row">
+  <input type="text" placeholder="Ingredient name" value="olive oil" required>
+  <input type="text" placeholder="Quantity" value="2 tbsp" required>
+</div>
+
+
+    <h3>Instructions</h3>
+    <input type="text" value="Mix: Combine dry ingredients and seeds. Gradually add water, honey, and oil.">
+    <input type="text" value="Knead: Knead for 5-8 minutes until smooth. Cover and let rise in a warm place for 1 hour.">
+    <input type="text" value="Shape: Form into an oval loaf. Brush the top with water and press extra seeds/oats onto the surface.">
+    <input type="text" value="Second Rise: Let it rest for 20 minutes. Preheat oven to 200°C.">
+    <input type="text" value="Bake: Score the top with a knife. Bake for 30-40 minutes until golden brown.">
+    <input type="text" value="Cool: Allow to cool completely before slicing.">
+
+    <label>Video URL (optional)</label>
+    <input type="url">
+
+    <button type="submit">Save Changes</button>
+
+  </form>
+
+</div>
+
+</body>
+</html>
