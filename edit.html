@@ -30,7 +30,14 @@ A wholesome, nutrient-packed loaf crafted with a blend of ancient grains and cru
     </textarea>
 
     <label>Recipe Photo</label>
-    <input type="file">
+    <div class="photo-upload-row">
+  <input type="file">
+
+  <div class="current-box">
+    <strong>Current Photo:</strong>
+    <img src="Multi-Grain_Power_Loaf_Recipe.png" alt="Current Recipe Photo">
+  </div>
+</div>
 
     <h3>Ingredients</h3>
 
@@ -83,10 +90,21 @@ A wholesome, nutrient-packed loaf crafted with a blend of ancient grains and cru
     <input type="text" value="Bake: Score the top with a knife. Bake for 30-40 minutes until golden brown.">
     <input type="text" value="Cool: Allow to cool completely before slicing.">
 
-    <label>Video URL (optional)</label>
-    <input type="url">
+    <label>Video or URL (optional)</label>
 
-    <button type="submit">Save Changes</button>
+    <div class="video-upload-row">
+  <input type="file">
+
+  <div class="current-box">
+    <strong>Current Video:</strong>
+    <a href="#" class="current-video-link">View current video</a>
+  </div>
+</div>
+
+<label>Video URL</label>
+<input type="url" value="https://youtube.com/sample-video">
+
+    <button type="submit">Update Recipe</button>
 
   </form>
 
