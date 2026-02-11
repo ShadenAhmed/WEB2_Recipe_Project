@@ -531,7 +531,6 @@ textarea {
   color: #DF7D6D;
   font-size: 12px;
 }
-/* ===== Current Photo & Video Boxes ===== */
 .photo-upload-row {
   display: flex;
   justify-content: space-between;
