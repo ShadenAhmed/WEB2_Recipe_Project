@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Profile - Bakery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="my-recipes-page">
+
+    <div class="my-recipes-card">
+        
+        <div class="page-header">
+            <h1>Welcome, Shatha</h1>
+            <a href="index.html" class="text-link">Log-out</a>
+        </div>
+
+        <div class="info-box">
+            <div class="info-layout">
+                <div>
+                    <h3>My Information</h3>
+                    <p><strong>Name:</strong> Shatha AlShalawi</p>
+                    <p><strong>Email:</strong> Bakery@gmail.com</p>
+                </div>
+                <div class="photo-frame">
+                    <img src="profile.png" alt="Profile">
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h3>My Recipes</h3>
+            <p><strong>Total Recipes:</strong> 15</p>
+            <p><strong>Total Likes:</strong> 132</p>
+            <br>
+            <a href="my-recipes.html" class="text-link">Go to My Recipes &rarr;</a>
+        </div>
+
+        <div class="page-header">
+            <h2>All Available Recipes</h2>
+            <div>
+                <select class="filter-select">
+                    <option>All Categories</option>
+                    <option>Healthy Bakery</option>
+                    <option>Gluten Free</option>
+                    <option>Sugar Free</option>
+                </select>
+                <button class="add-recipe-link filter-btn">Filter</button>
+            </div>
+        </div>
+
+        <table class="recipes-table">
+            <thead>
+                <tr>
+                    <th>Recipe Name</th>
+                    <th>Recipe Photo</th>
+                    <th>Recipe Creator</th>
+                    <th>Number of Likes</th>
+                    <th>Category</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="recipe-cell"><a href="view.html">Oat & Banana Muffins</a></td>
+                    <td class="recipe-cell"><img src="Oat&BananaMuffins.png" alt="Muffins"></td>
+                    <td class="recipe-cell">
+                        Sarah <br>
+                        <img src="sarah.png" alt="Chef" width="40" class="creator-img">
+                    </td>
+                    <td>28</td>
+                    <td>Healthy Bakery</td>
+                </tr>
+                <tr>
+                    <td class="recipe-cell"><a href="view.html">Multi-Grain Power Loaf</a></td>
+                    <td class="recipe-cell"><img src="Multi-Grain_Power_Loaf_Recipe.png" alt="Loaf"></td>
+                    <td class="recipe-cell">
+                        Shaden A <br>
+                        <img src="Profile_image1.png" alt="Chef" width="40" class="creator-img">
+                    </td>
+                    <td>150</td>
+                    <td>Gluten Free</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+
+        <h2 class="section-title">My Favourite Recipes &#10084;</h2>
+        <table class="recipes-table">
+            <thead>
+                <tr>
+                    <th>Recipe Name</th>
+                    <th>Recipe Photo</th>
+                    <th></th> </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="recipe-cell"><a href="view.html">Oat & Banana Muffins</a></td>
+                    <td class="recipe-cell"><img src="Oat&BananaMuffins.png" alt="Muffins"></td>
+                    <td><a href="user.html" class="text-link">Remove</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</body>
+</html>
