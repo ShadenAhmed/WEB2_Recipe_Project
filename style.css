@@ -531,6 +531,181 @@ textarea {
   color: #DF7D6D;
   font-size: 12px;
 }
+
+
+/* =========================================
+   SECOND RECIPE CARD CONTAINER
+   ========================================= */
+
+/* Main card styling for second recipe */
+.recipe-card-two {
+  background: #F8E1B8;          
+  width: 700px;                 
+  padding: 30px;                
+  border-radius: 14px;          
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25); 
+  margin-top: 40px;             /
+}
+
+/* Recipe title */
+.recipe-card-two h1 {
+  text-align: center;           
+  color: #9C0300;               
+  margin-bottom: 20px;          
+}
+
+/* Recipe main image */
+.recipe-card-two .recipe-img {
+  width: 100%;                  
+  border-radius: 10px;          
+  margin: 15px 0;               
+}
+
+
+/* =========================================
+   CREATOR SECTION (Name + Profile Image)
+   ========================================= */
+
+/* Container for creator and buttons */
+.creator-actions-two {
+  display: flex;                
+  justify-content: space-between; 
+  align-items: center;          
+  margin: 15px 0 25px;          
+}
+
+/* Creator info layout */
+.creator-two {
+  display: flex;                
+  align-items: center;
+  gap: 10px;                    
+}
+
+/* Creator profile image */
+.creator-two img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;         
+}
+
+
+.creator-two small {
+  color: #DF7D6D;
+  font-size: 12px;
+}
+
+
+/* =========================================
+   ACTION BUTTONS (Like, Favorite, Report)
+   ========================================= */
+
+.recipe-actions-two {
+  display: flex;
+  gap: 15px;                    
+}
+
+/* Base button styling */
+.recipe-actions-two .action-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #CC3434;          
+  color: #F8E1B8;               
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;          
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;          
+}
+
+/* Button hover effect */
+.recipe-actions-two .action-btn:hover {
+  background: #9C0300;          
+  transform: translateY(-2px);  
+}
+
+
+.recipe-actions-two .danger {
+  background: #8E2E0D;          
+}
+
+
+.recipe-actions-two .danger:hover {
+  background: #6f2208;
+}
+
+
+/* =========================================
+   INGREDIENTS & STEPS SECTION
+   ========================================= */
+
+/* Grid layout for ingredients and steps */
+.recipe-sections-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 25px;
+  margin: 30px 0;
+}
+
+
+.recipe-box-two {
+  background: #fff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+/* Hover animation for boxes */
+.recipe-box-two:hover {
+  transform: translateY(-4px);
+}
+
+
+.recipe-box-two h2 {
+  color: #9C0300;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+
+/* =========================================
+   INGREDIENTS LIST STYLE
+   ========================================= */
+
+
+.ingredients-list-two {
+  list-style: none;
+  padding: 0;
+}
+
+
+.ingredients-list-two li {
+  display: flex;
+  justify-content: space-between;  
+  padding: 8px 0;
+  border-bottom: 1px dashed #DF7D6D;
+}
+
+
+.ingredients-list-two li:last-child {
+  border-bottom: none;
+}
+
+.ingredients-list-two .ingredient-name {
+  font-weight: 500;
+  color: #8E2E0D;
+}
+
+.ingredients-list-two .ingredient-qty {
+  background: #F297AF;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
 /* ===== Current Photo & Video Boxes ===== */
 .photo-upload-row {
   display: flex;
