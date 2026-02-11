@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     adminForms.forEach(form => {
         form.addEventListener('submit', (e) => {
             
-            // Prevent the actual submission 
+            // Prevent the actual submission (no server-side yet)
             e.preventDefault(); 
             
             // Alert user of the action
