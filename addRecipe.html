@@ -4,174 +4,142 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Add Recipe</title>
+ <link rel="stylesheet" href="style.css">
 
-<style>
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f8f7;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    width: 60%;
-    margin: 40px auto;
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-h2 {
-    text-align: center;
-    color: #2c6e49;
-}
-
-label {
-    font-weight: bold;
-    display: block;
-    margin-top: 15px;
-}
-
-input, select, textarea {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-button {
-    margin-top: 10px;
-    padding: 8px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.add-btn {
-    background-color: #4caf50;
-    color: white;
-}
-
-.submit-btn {
-    background-color: #2c6e49;
-    color: white;
-    width: 100%;
-    padding: 10px;
-    margin-top: 20px;
-}
-</style>
 </head>
 
-<body>
+<body class="edit-page">
 
-<div class="container">
-<h2>Add New Recipe</h2>
+<div class="form-card">
+    <h1>Add New Recipe</h1>
 
+    <form action="my-recipes.html">
 
-<form action="myRecipes.html">
-
-    <!-- Name -->
-    <label>Name:</label>
-    <input type="text" required>
-    <br><br>
-
-    <!-- Category -->
-    <label>Category:</label>
-    <select required>
-        <option value="">Select</option>
-        <option>Breakfast</option>
-        <option>Lunch</option>
-        <option>Dessert</option>
-    </select>
-    <br><br>
-
-    <!-- Description -->
-    <label>Description:</label><br>
-    <textarea rows="4" cols="50" required></textarea>
-    <br><br>
-
-    <!-- Photo -->
-    <label>Upload Recipe Photo:</label><br>
-    <input type="file" accept="image/*" required>
-    <br><br>
-
-    <!-- Ingredients -->
-    <h3>Ingredients:</h3>
-    <div id="ingredients">
-
-        <div>
-            <label>Ingredient 1:</label>
-            Name: <input type="text" required>
-            Quantity: <input type="text" required>
+        <!-- Recipe Name -->
+        <div class="form-group">
+            <label>Name <span class="required">*</span></label>
+            <input type="text" required>
         </div>
 
-    </div>
-
-    <button type="button" onclick="addIngredient()">+ Add another ingredient</button>
-
-    <br><br>
-
-    <!-- Instructions -->
-    <h3>Instructions:</h3>
-    <div id="instructions">
-
-        <div>
-            <label>Step 1:</label>
-            <input type="text" size="60" required>
+        <!-- Category -->
+        <div class="form-group">
+            <label>Category <span class="required">*</span></label>
+            <select required>
+                <option value="">Select</option>
+                <option>Healthy Bakery </option>
+                <option>Gluten Free</option>
+                <option>Sugar Free</option>
+            </select>
         </div>
 
+        <!-- Description -->
+        <div class="form-group">
+            <label>Description <span class="required">*</span></label>
+            <textarea required></textarea>
+        </div>
+
+        <!-- Photo -->
+        <div class="form-group">
+            <label>Upload Recipe Photo <span class="required">*</span></label>
+            <input type="file" accept="image/*" required>
+        </div>
+
+        <!-- Ingredients -->
+         <h2 style="color:#9C0300;">Ingredients <span class="required">*</span></h2>
+
+<div id="ingredients">
+
+    <!-- First Ingredient (Cannot Be Deleted) -->
+    <div class="ingredient-row">
+        <input type="text" placeholder="Ingredient Name" required>
+        <input type="text" placeholder="Quantity" required>
     </div>
 
-    <button type="button" onclick="addStep()">+ Add another step</button>
+</div>
 
-    <br><br>
+<button type="button" class="action-btn" onclick="addIngredient()">
+    + Add another ingredient
+</button>
 
-    <!-- Video -->
-    <h3>Upload Video or URL:</h3>
 
-    <input type="file" accept="video/*">
-    <br><br>
+        <!-- Instructions -->
 
-    <label>Video URL:</label>
-    <input type="url">
-    <br><br>
+        <h2 style="color:#9C0300;">
+  Instructions <span class="required">*</span>
+</h2>
 
-    <!-- Submit -->
-    <button type="submit">Add Recipe</button>
+<div id="instructions">
 
-</form>
+    <!-- First Step (Cannot Be Deleted) -->
+    <div class="instruction-row">
+        <input type="text" placeholder="Step 1" required>
+    </div>
+
+</div>
+
+<button type="button" class="action-btn" onclick="addStep()">
+    + Add another step
+</button>
+
+
+        <!-- Video -->
+        <div class="form-group" style="margin-top:20px;">
+            <label>Upload Video (Optional)</label>
+            <input type="file" accept="video/*">
+        </div>
+
+        <div class="form-group">
+            <label>Video URL (Optional)</label>
+            <input type="url">
+        </div>
+
+        <!-- Submit -->
+        <button type="submit">Add Recipe</button>
+        
+
+    </form>
+</div>
 
 <script>
-let ingredientCount = 1;
-let stepCount = 1;
-
 function addIngredient() {
-    ingredientCount++;
 
     const div = document.createElement("div");
+    div.className = "ingredient-row";
+
     div.innerHTML = `
-        <label>Ingredient ${ingredientCount}:</label>
-        Name: <input type="text" required>
-        Quantity: <input type="text" required>
+        <input type="text" placeholder="Ingredient Name" required>
+        <input type="text" placeholder="Quantity" required>
+        <button type="button" class="mini-delete" onclick="removeIngredient(this)">✕</button>
     `;
 
     document.getElementById("ingredients").appendChild(div);
 }
 
+function removeIngredient(button) {
+    button.parentElement.remove();
+}
+let stepCount = 1;
+
 function addStep() {
     stepCount++;
 
     const div = document.createElement("div");
+    div.className = "instruction-row";
+
     div.innerHTML = `
-        <label>Step ${stepCount}:</label>
-        <input type="text" size="60" required>
+        <input type="text" placeholder="Step ${stepCount}" required>
+        <button type="button" class="mini-delete" onclick="removeStep(this)">✕</button>
     `;
 
     document.getElementById("instructions").appendChild(div);
 }
+
+function removeStep(button) {
+    button.parentElement.remove();
+}
+
 </script>
 
 </body>
+
 </html>

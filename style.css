@@ -925,9 +925,6 @@ textarea {
   text-decoration: none;
 }
 
-
-
-
 /* ===== Simple Logout Box ===== */
 .logout-box {
   position: absolute;
@@ -953,4 +950,44 @@ textarea {
 /* Adjust admin-container padding to avoid overlap */
 .admin-container {
   padding: 80px 50px 20px 50px; /* top padding reduced from 110px */
+}
+
+S/* LANA'S addRECIPES PAGE STYLES** */
+.ingredient-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr auto;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.mini-delete {
+  background: #8E2E0D;
+  color: #F8E1B8;
+  border: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.mini-delete:hover {
+  background: #6f2208;
+}
+.required {
+  color: #CC3434;   /* your pink/red theme */
+  margin-left: 4px;
+  font-weight: bold;
+}
+.instruction-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
 }
