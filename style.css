@@ -289,7 +289,12 @@
 }
 
 /* ===== View & Edit Pages ===== */
-.view-page,
+.view-page{
+  min-height: 100vh;
+  background: #9C462F;
+  padding: 40px 0;
+}
+
 .edit-page {
   min-height: 100vh;
   background: #9C462F;
@@ -299,7 +304,15 @@
   padding: 40px 0;
 }
 
-.recipe-card,
+.recipe-card{
+  background: #F8E1B8;
+  width: 700px;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  margin: 40px auto;
+}
+
 .form-card {
   background: #F8E1B8;
   width: 700px;
@@ -592,10 +605,8 @@ textarea {
 .my-recipes-page {
   min-height: 100vh;
   background: #9C462F;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
+
 
 .my-recipes-card {
   background: #F8E1B8;
@@ -603,6 +614,7 @@ textarea {
   max-width: 1200px;
   padding: 25px;
   border-radius: 14px;
+  margin: 40px auto;
 }
 
 .my-recipes-header {
