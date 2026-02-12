@@ -64,6 +64,15 @@
 .home-page .navbar a:hover {
   color: #FFB575;
 }
+/* ===== Home Page Logo ===== */
+.home-page .home-logo {
+  width: 250px;
+  height: auto;
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* ===== Background Images ===== */
 .home-page .bg-img {
@@ -991,3 +1000,4 @@ S/* LANA'S addRECIPES PAGE STYLES** */
   align-items: center;
   margin-bottom: 10px;
 }
+
