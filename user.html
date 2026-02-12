@@ -5,9 +5,9 @@
     <title>User Profile - Bakery</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="my-recipes-page">
+<body class="home-page">
 
-    <div class="my-recipes-card">
+    <div class="page my-recipes-card" style="height: auto; padding: 40px; overflow-y: auto;">
         
         <div class="page-header">
             <h1>Welcome, Shatha</h1>
@@ -79,18 +79,28 @@
                     <td>150</td>
                     <td>Gluten Free</td>
                 </tr>
+                <tr>
+                    <td class="recipe-cell"><a href="view.html">Sugar-Free Cookies</a></td>
+                    <td class="recipe-cell"><img src="Cookies.png" alt="Cookies"></td>
+                    <td class="recipe-cell">
+                        Noura <br>
+                        <img src="Noura.jpeg" alt="Chef" width="40" class="creator-img">
+                    </td>
+                    <td>85</td>
+                    <td>Sugar Free</td>
+                </tr>
             </tbody>
         </table>
 
         <br>
-
         <h2 class="section-title">My Favourite Recipes &#10084;</h2>
         <table class="recipes-table">
             <thead>
                 <tr>
                     <th>Recipe Name</th>
                     <th>Recipe Photo</th>
-                    <th></th> </tr>
+                    <th></th> 
+                </tr>
             </thead>
             <tbody>
                 <tr>
@@ -100,8 +110,35 @@
                 </tr>
             </tbody>
         </table>
-
     </div>
+
+    <footer class="site-footer">
+        <div class="container footer-box">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Find us</h4>
+                    <ul class="social">
+                        <li><a href="#" aria-label="X">X</a></li>
+                        <li><a href="#" aria-label="Facebook">f</a></li>
+                        <li><a href="#" aria-label="LinkedIn">in</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col center">
+                    <div class="brand">
+                        <img src="Bakery.png" alt="Bakery logo" style="width:120px;">
+                    </div>
+                    <small>©️2026 Munch. All rights reserved</small>
+                </div>
+
+                <div class="footer-col right">
+                    <h4>contact Info</h4>
+                    <p>+966444282741</p>
+                    <p><a href="mailto:Munch@gmail.com">Munch@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
